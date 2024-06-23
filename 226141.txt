@@ -1,0 +1,104 @@
+4.Иницијализирање на Git во директориумот
+$ git init
+Initialized empty Git repository in C:/Users/USER/SI_2024_lab1_226141/.git/
+
+5. Поврзување на локалниот репозиториум со оддалечениот репозиториум
+$ git remote add origin https://github.com/kristinak26/SI_2024_lab1_226141.git
+
+6. Додавање на README и commit na master
+echo "# Kristina Karanfilovska\n Index:226141" > README.md
+git add README.md
+git commit -m "Initial commit"
+
+7.
+git add SILab1Main.java SILab1_1.java SILab1_2.java
+git commit -m "Add starter code"
+
+8.Синхронизирајте ги гранките со оддалечениот репозиториум
+git push origin master
+9. создавање на гранка2
+git branch bug1
+git branch bug2
+
+10. префрлање на bug1
+git checkout bug1
+
+11. поправанје на грешката во методот
+git add SILab1_1.java
+git commit -m "Fix wrong condition in filterOddLengtStrings"
+
+12.префрлање на bug2
+git checkout bug2
+
+13. поправанје на грешката во методот
+git add SILab1_2.java
+git commit -m "Fix wrong condition in makeBigStringForm"
+
+14. од bug1 на bug2
+ git checkout bug1
+
+15. промена на main, stageing и вториот commit на bug 1
+ git add SILab1Main.java
+ git commit -m "Call method filterOddLengtStrings in main class"
+
+16. врати branch bug2
+git checkout bug2
+
+17.  промена на main, stageing и вториот commit на bug2
+ git add SILab1Main.java
+ git commit -m "Call method makeBigStringForm in main class"
+
+18.Синхронизација
+git push origin master
+git push origin bug1
+git push origin bug2
+
+19. git checkout master
+20.спојување на гранката bug1 со master 
+git merge bug1
+
+21. синхронизација, upload на github на master bug1 и bug2 со нови commits 
+git push origin master
+git push origin bug1
+git push origin bug2
+
+22. префрla од master на bug2
+git checkout bug2
+
+23.rebase спрема гранката bug2 према master, има конфликт, stageing и повторно rebase
+  git rebase master
+  git add SILab1Main.java
+  git rebase --continue
+
+24. префрли од bug2 на master
+  git checkout master
+
+25. спојување на maste so bug2 with fast-forward no conflicts
+  git merge bug2
+
+26. Синхронизација на сите гранки со оддалечениот репозиториум од сите гранки, upload на github
+ git push origin master
+ git push origin bug1
+ git push origin bug2
+
+27. употреба на --force
+ git push --force origin bug2
+
+28. Прикажување на логовите, staging na files и трет commit  на master branch
+git log
+git add logs.txt
+git add 226141.txt
+git commit -m "Final commit"
+
+29.Крајна синхронизација на сите гранки со оддалечениот репозиториум од сите гранки, upload на github
+git push origin master
+git push origin bug1
+git push origin bug2
+
+
+
+
+
+
+
+
